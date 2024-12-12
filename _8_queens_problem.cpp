@@ -397,6 +397,7 @@ int main(){
             posY += tileHeight; // Set the y-coordinates of the tiles in the next row of the chess board
         }
 
+        //int best_ind[chromosome_length] = {5, 2, 0, 5, 7, 4, 1, 3}; // to remove
         placeQueens(queen, best_ind, 0, statDisplayHeight, tileWidth, tileHeight);
 
         EndDrawing(); // End drawing
