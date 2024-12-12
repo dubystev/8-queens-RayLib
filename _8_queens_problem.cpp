@@ -315,8 +315,8 @@ void reproduce()
     gen++; // update the number of generations completed so far
 }
 
-int main()
-{
+int main(){
+
     // set the genetic algorithm variables
     best_ = 0; // assume the first chromosome is the best
 
