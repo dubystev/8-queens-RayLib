@@ -1,0 +1,26 @@
+"C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\hp\CLionProjects\FirstRayLib -B C:\Users\hp\CLionProjects\FirstRayLib\cmake-build-debug
+-- Populating raylib
+-- Configuring done (7.7s)
+-- Generating done (1.1s)
+-- Build files have been written to: C:/Users/hp/CLionProjects/FirstRayLib/cmake-build-debug/_deps/raylib-subbuild
+[0/7] Performing update step for 'raylib-populate'
+fatal: unable to access 'https://github.com/raysan5/raylib.git/': SSL connection timeout
+CMake Error at C:/Users/hp/CLionProjects/FirstRayLib/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/tmp/raylib-populate-gitupdate.cmake:8 (execute_process):
+  execute_process last command failed
+Call Stack (most recent call first):
+  C:/Users/hp/CLionProjects/FirstRayLib/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/tmp/raylib-populate-gitupdate.cmake:76 (do_fetch)
+
+
+FAILED: raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update C:/Users/hp/CLionProjects/FirstRayLib/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update 
+C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\hp\CLionProjects\FirstRayLib\cmake-build-debug\_deps\raylib-src && "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -Dcan_fetch=YES -P C:/Users/hp/CLionProjects/FirstRayLib/cmake-build-debug/_deps/raylib-subbuild/raylib-populate-prefix/tmp/raylib-populate-gitupdate.cmake"
+ninja: build stopped: subcommand failed.
+CMake Error at C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FetchContent.cmake:1714 (message):
+  Build step for raylib failed: 1
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FetchContent.cmake:1854:EVAL:2 (__FetchContent_directPopulate)
+  C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FetchContent.cmake:1854 (cmake_language)
+  C:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/FetchContent.cmake:2081 (FetchContent_Populate)
+  CMakeLists.txt:19 (FetchContent_MakeAvailable)
+
+
+-- Configuring incomplete, errors occurred!
