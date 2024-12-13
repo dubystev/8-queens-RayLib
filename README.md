@@ -9,10 +9,10 @@
 
 ## Table of Contents
 1. [About the Project](#about-the-project)  
-2. [Features](##features)  
-3. [Getting Started](#getting-started)  
-   - [Prerequisites](#prerequisites)  
-   - [Installation](#installation)  
+2. [Features](#features)
+3. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation) 
 4. [Short Explanation](#short-explanation)
    - [Evolutionary Process](#evolutionary-process)
    - [Animation](#animation)
