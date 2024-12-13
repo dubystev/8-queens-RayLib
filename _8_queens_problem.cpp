@@ -115,17 +115,17 @@ int rws_select(int first = popSize)
     }
 
     int select_i = 0;
+    if(first == 0)
+        select_i++;
     int accumulation = fitness[select_i].first;
     const float rndT = floatDist(generator);
     const float cut_off = rndT * static_cast<float>(sum_fitness);
     while(static_cast<float>(accumulation) < cut_off)
     {
+        select_i++;
         if(select_i == first)
-        {
             select_i++;
-            continue;
-        }
-        accumulation += fitness[select_i++].first;
+        accumulation += fitness[select_i].first;
     }
 
     return select_i;
@@ -315,10 +315,10 @@ void reproduce()
     gen++; // update the number of generations completed so far
 }
 
-int main(){
-
+int main()
+{
     // set the genetic algorithm variables
-    best_ = 0; // assume the first chromosome is the best
+    best_ = 0; // assume the first chromosome is the best stuck = 0; gen = 0;
 
     // set utility variables
     std::uniform_int_distribution dist(0, 7); // Range [0, 7]
@@ -355,7 +355,7 @@ int main(){
 
     // Unload the original image from memory (no longer needed after creating the texture)
     UnloadImage(image);
-    SetTargetFPS(30); // Set the FPS (frames per second)
+    SetTargetFPS(60); // Set the FPS (frames per second)
 
     // Main game/animation loop
     while (!WindowShouldClose()) {
@@ -397,7 +397,6 @@ int main(){
             posY += tileHeight; // Set the y-coordinates of the tiles in the next row of the chess board
         }
 
-        //int best_ind[chromosome_length] = {5, 2, 0, 5, 7, 4, 1, 3}; // to remove
         placeQueens(queen, best_ind, 0, statDisplayHeight, tileWidth, tileHeight);
 
         EndDrawing(); // End drawing
